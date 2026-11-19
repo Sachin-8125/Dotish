@@ -1,0 +1,34 @@
+{
+  "name": "dotish",
+  "displayName": "Dotish",
+  "description": "Remove recognized comments from the active file in one undoable edit.",
+  "version": "1.0.0",
+  "publisher": "local-tools",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:deleteAllComments.remove"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "deleteAllComments.remove",
+        "title": "Delete All Comments",
+        "category": "Comments"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "deleteAllComments.remove",
+        "key": "ctrl+alt+shift+c",
+        "mac": "cmd+alt+shift+c",
+        "when": "editorTextFocus"
+      }
+    ]
+  }
+}
